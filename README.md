@@ -3,7 +3,6 @@ Provide 2 http endpoints that accepts JSON base64 encoded binary data on
 both endpoints:
 
 • /v1/diff/left and /v1/diff/right
-
 • The provided data needs to be diff-ed and the results shall be available on a
 third end point:
 
