@@ -1,15 +1,24 @@
 # Json Diff
 Provide 2 http endpoints that accepts JSON base64 encoded binary data on
 both endpoints:
+
 • /v1/diff/left and /v1/diff/right
+
 • The provided data needs to be diff-ed and the results shall be available on a
 third end point:
+
 • /v1/diff/
+
 • The results shall provide the following info in JSON format:
+
 • Return the information if the data are equal or not.
+
 • If:
+
 • They don’t have the same size return this information.
+
 • They have the same size but are not equal, provide information about
+
 where the differences are. Ex.: offsets + length in the data.
 
 • Make assumptions in the implementation explicit, choices are good but need
