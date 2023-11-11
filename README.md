@@ -83,3 +83,4 @@ AWS VPC (Virtual Private Cloud): Provides network isolation for resources. Secur
 - Apply Unit, AutoMapper, SOLID techniques
 - Use high availability configuration (implemented)
 - Use kubernetes cluster to implement (horizontal) scalability.
+- Create independent IAC repository for infrastructure provisioning. Creation of terraform modules for code reuse in the creation of EC2 instances
