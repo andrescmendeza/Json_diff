@@ -54,7 +54,7 @@ Provide a endpoint for diff comparison between them.
 ### Techonologies
 - Springboot
 - Java 11
-- UnitTest
+- JUnit
 - Docker
 - AWS: Ec2, Lambda, API gateway
 - IAC Terraform
@@ -108,6 +108,14 @@ GitHub Actions workflow includes a unit test step before deploying to AWS EC2.
 
 The deploy job now includes steps to log in to AWS ECR, build the Docker image, push it to ECR, and then SSH into your EC2 instance to pull and run the Docker image.
 
+### Test Stage
+
+In these examples:
+
+@WebMvcTest is used to focus only on the web layer by configuring Spring MVC infrastructure.
+@MockBean is used to mock the DemoDiffController dependency.
+@InjectMocks is used to inject the mocked dependencies into the DemoDiffController.
+The MockMvc is used to perform HTTP requests and validate the responses.
 
 ### Suggestion to improve
 - Distribute the application in containers Docker (implemented)
