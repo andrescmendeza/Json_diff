@@ -55,8 +55,31 @@ Provide a endpoint for diff comparison between them.
 - Springboot
 - Java 11
 - UnitTest
+- Docker
+- AWS: Ec2, Lambda, API gateway
+- IAC Terraform
+
+### Architectural diagram 
+
+Architectural diagram involves multiple components, and in this case uses a Spring Boot application on AWS using containers and Elastic Container Registry (ECR). These are the basic components involved:
+
+Amazon Elastic Container Registry (ECR): Hosts Docker container images.
+
+Amazon Elastic Container Service (ECS):
+Orchestrates and manages the Docker containers.
+Runs and scales the Spring Boot application containers.
+
+Spring Boot Application: Containerized using Docker. Images stored in ECR.
+
+Amazon API Gateway: Handles incoming HTTP requests and routes them to the appropriate ECS service.
+
+Amazon EC2 Instances: ECS may use EC2 instances as underlying hosts for the containers.
+
+AWS VPC (Virtual Private Cloud): Provides network isolation for resources. Security groups and network ACLs control traffic flow.
+
 
 ### Suggestion to improve
-- Distribute the application in containers Docker
+- Distribute the application in containers Docker (implemented)
 - Apply Unit, AutoMapper, SOLID techniques
-- Use an Api Gateway or create an Oauth server for Authentication and Authentication
+- Use high availability configuration (implemented)
+- Use kubernetes cluster to implement (horizontal) scalability.
