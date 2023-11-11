@@ -3,3 +3,4 @@ mvnw
 mvnw.cmd
 .vscode
 .target
+target/*
